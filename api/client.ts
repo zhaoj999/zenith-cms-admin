@@ -1,4 +1,7 @@
-const BASE_URL = 'http://localhost:8000/api';
+// 在 Vercel 部署时使用相对路径,本地开发使用 localhost
+const BASE_URL = import.meta.env.VITE_API_URL || (
+  import.meta.env.PROD ? '/api' : 'http://localhost:8000/api'
+);
 
 interface RequestOptions extends RequestInit {
   // Add any custom options here
@@ -6,7 +9,7 @@ interface RequestOptions extends RequestInit {
 
 export async function request<T>(endpoint: string, options: RequestOptions = {}): Promise<T> {
   const url = `${BASE_URL}${endpoint}`;
-  
+
   const headers = {
     'Content-Type': 'application/json',
     ...options.headers,
@@ -19,7 +22,7 @@ export async function request<T>(endpoint: string, options: RequestOptions = {})
 
   try {
     const response = await fetch(url, config);
-    
+
     if (!response.ok) {
       const errorBody = await response.text();
       throw new Error(`API Error: ${response.status} - ${errorBody}`);
