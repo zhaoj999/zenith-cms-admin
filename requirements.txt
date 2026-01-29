@@ -1,4 +1,0 @@
-fastapi>=0.109.0
-supabase>=2.13.0
-pydantic>=2.6.0
-mangum>=0.17.0

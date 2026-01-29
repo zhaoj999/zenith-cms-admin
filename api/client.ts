@@ -1,6 +1,5 @@
-// 在 Vercel 部署时使用相对路径,本地开发使用 localhost
 const BASE_URL = import.meta.env.VITE_API_URL || (
-  import.meta.env.PROD ? '/api' : 'http://localhost:8000/api'
+  import.meta.env.PROD ? '' : 'http://localhost:8000/api'
 );
 
 interface RequestOptions extends RequestInit {
