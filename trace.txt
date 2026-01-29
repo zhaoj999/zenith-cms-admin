@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "D:\phpstudy_pro\WWW\zenith-cms-admin\test_supabase_debug.py", line 2, in <module>
+    import supabase
+  File "C:\Users\xieweiping\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\supabase\__init__.py", line 1, in <module>
+    from postgrest import APIError as PostgrestAPIError
+  File "C:\Users\xieweiping\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\postgrest\__init__.py", line 5, in <module>
+    from httpx import Timeout
+  File "C:\Users\xieweiping\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpx\__init__.py", line 2, in <module>
+    from ._api import delete, get, head, options, patch, post, put, request, stream
+  File "C:\Users\xieweiping\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpx\_api.py", line 4, in <module>
+    from ._client import Client
+  File "C:\Users\xieweiping\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpx\_client.py", line 30, in <module>
+    from ._transports.default import AsyncHTTPTransport, HTTPTransport
+  File "C:\Users\xieweiping\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpx\_transports\default.py", line 30, in <module>
+    import httpcore
+  File "C:\Users\xieweiping\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\httpcore\__init__.py", line 139, in <module>
+    setattr(__locals[__name], "__module__", "httpcore")  # noqa
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'typing.Union' object has no attribute '__module__' and no __dict__ for setting new attributes. Did you mean: '__reduce__'?
